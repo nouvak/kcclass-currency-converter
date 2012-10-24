@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion" object="${foreigncurrencytoeuroconversion}" path="/foreigncurrencytoeuroconversions" z="BgKT7CvMrmKIuaXRMGfDvXnveIM=">
+        <field:display field="currency" id="s_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_currency" object="${foreigncurrencytoeuroconversion}" z="fm3scVtKJkwOCox4+iGlT5/3Cuk="/>
+        <field:display date="true" dateTimePattern="${foreignCurrencyToEuroConversion_dateofconversion_date_format}" field="dateOfConversion" id="s_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_dateOfConversion" object="${foreigncurrencytoeuroconversion}" z="ZtEzu97/5XjWMLAlTkKJughMuAQ="/>
+        <field:display field="quotient" id="s_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_quotient" object="${foreigncurrencytoeuroconversion}" z="DUaZSDIjlZ50FzND/oY4yqODdZQ="/>
+    </page:show>
+</div>

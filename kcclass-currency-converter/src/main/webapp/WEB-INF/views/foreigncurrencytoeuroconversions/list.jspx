@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion" items="${foreigncurrencytoeuroconversions}" z="OcqfTms4fnM5NVOL1sL8K6H4IkY=">
+        <table:table data="${foreigncurrencytoeuroconversions}" id="l_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion" path="/foreigncurrencytoeuroconversions" z="PwSpVLXT4QrPfyCtsOujCe+Y3hA=">
+            <table:column id="c_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_currency" property="currency" z="4kMxo8xuJEVpBNndPjRAG8PT+fI="/>
+            <table:column date="true" dateTimePattern="${foreignCurrencyToEuroConversion_dateofconversion_date_format}" id="c_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_dateOfConversion" property="dateOfConversion" z="Nr5QX+Xwru60zoKr/5cq/j6zCY8="/>
+            <table:column id="c_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_quotient" property="quotient" z="j3nKVcW2VVWvgTvHl8Wt0N1pTzk="/>
+        </table:table>
+    </page:list>
+</div>

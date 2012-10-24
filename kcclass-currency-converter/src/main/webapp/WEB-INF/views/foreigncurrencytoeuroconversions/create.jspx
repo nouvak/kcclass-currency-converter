@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion" modelAttribute="foreignCurrencyToEuroConversion" path="/foreigncurrencytoeuroconversions" render="${empty dependencies}" z="VL/gZsYe2cG75o1Rfmxt/3HGFfw=">
+        <field:select field="currency" id="c_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_currency" itemValue="id" items="${foreigncurrencys}" path="/foreigncurrencys" z="jnpm0zsG0DVLRgmjcO5pgRVaTwA="/>
+        <field:datetime dateTimePattern="${foreignCurrencyToEuroConversion_dateofconversion_date_format}" field="dateOfConversion" id="c_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_dateOfConversion" z="H7ZBCUTRZaOQplWYOq8WydLlTNo="/>
+        <field:input field="quotient" id="c_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion_quotient" required="true" z="o+S+xYZxQRYZPYas5dh3XfmyZCQ="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_si_kcclass_currencyconverter_ForeignCurrencyToEuroConversion" render="${not empty dependencies}" z="KZe5UF/cdnzVWiqCDgnhclByRlo="/>
+</div>
