@@ -17,7 +17,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<ForeignCurrency, String> ApplicationConversionServiceFactoryBean.getForeignCurrencyToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<si.kcclass.currencyconverter.ForeignCurrency, java.lang.String>() {
             public String convert(ForeignCurrency foreignCurrency) {
-                return new StringBuilder().append(foreignCurrency.getName()).toString();
+                return new StringBuilder().append(foreignCurrency.getSymbol()).append(" ").append(foreignCurrency.getName()).toString();
             }
         };
     }

@@ -7,6 +7,14 @@ import si.kcclass.currencyconverter.ForeignCurrency;
 
 privileged aspect ForeignCurrency_Roo_JavaBean {
     
+    public String ForeignCurrency.getSymbol() {
+        return this.symbol;
+    }
+    
+    public void ForeignCurrency.setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+    
     public String ForeignCurrency.getName() {
         return this.name;
     }
