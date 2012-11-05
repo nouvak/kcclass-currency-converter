@@ -3,7 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_si_kcclass_currencyconverter_ForeignCurrency" modelAttribute="foreignCurrency" path="/foreigncurrencys" render="${empty dependencies}" z="JpluR1HiUrs3hJYSn1v7Fs9feZ8=">
-        <field:input field="name" id="c_si_kcclass_currencyconverter_ForeignCurrency_name" z="SPY9c6gMOrQhcSEFBYytUZcbkXk="/>
+        <field:input field="name" id="c_si_kcclass_currencyconverter_ForeignCurrency_name" required="true" z="r9kB8ErQXSxnZ2t3bkHiq5Kr73A="/>
+        <field:input field="symbol" id="c_si_kcclass_currencyconverter_ForeignCurrency_symbol" required="true" z="QT35OwHYy0/NzlD1GXvDJEG0JDo="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_si_kcclass_currencyconverter_ForeignCurrency" render="${not empty dependencies}" z="qjbL2HrOebwBCZftKS5CT4fnOH4="/>
 </div>

@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_si_kcclass_currencyconverter_ForeignCurrency" object="${foreigncurrency}" path="/foreigncurrencys" z="mTiDIyS+JW+fwVerFUp9FvSs9KM=">
         <field:display field="name" id="s_si_kcclass_currencyconverter_ForeignCurrency_name" object="${foreigncurrency}" z="Uds/QrrFO93chfF2gP+CtsyMyRk="/>
+        <field:display field="symbol" id="s_si_kcclass_currencyconverter_ForeignCurrency_symbol" object="${foreigncurrency}" z="VTh95bB4rdB0OUBG/OmYWY8uhB0="/>
     </page:show>
 </div>
