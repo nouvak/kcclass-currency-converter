@@ -9,34 +9,34 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
-import si.kcclass.currencyconverter.ForeignCurrencyToEuroConversion;
+import si.kcclass.currencyconverter.ForeignCurrencyToEuroRate;
 
-privileged aspect ForeignCurrencyToEuroConversion_Roo_Jpa_Entity {
+privileged aspect ForeignCurrencyToEuroRate_Roo_Jpa_Entity {
     
-    declare @type: ForeignCurrencyToEuroConversion: @Entity;
+    declare @type: ForeignCurrencyToEuroRate: @Entity;
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private Long ForeignCurrencyToEuroConversion.id;
+    private Long ForeignCurrencyToEuroRate.id;
     
     @Version
     @Column(name = "version")
-    private Integer ForeignCurrencyToEuroConversion.version;
+    private Integer ForeignCurrencyToEuroRate.version;
     
-    public Long ForeignCurrencyToEuroConversion.getId() {
+    public Long ForeignCurrencyToEuroRate.getId() {
         return this.id;
     }
     
-    public void ForeignCurrencyToEuroConversion.setId(Long id) {
+    public void ForeignCurrencyToEuroRate.setId(Long id) {
         this.id = id;
     }
     
-    public Integer ForeignCurrencyToEuroConversion.getVersion() {
+    public Integer ForeignCurrencyToEuroRate.getVersion() {
         return this.version;
     }
     
-    public void ForeignCurrencyToEuroConversion.setVersion(Integer version) {
+    public void ForeignCurrencyToEuroRate.setVersion(Integer version) {
         this.version = version;
     }
     

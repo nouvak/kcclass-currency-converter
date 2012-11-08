@@ -13,7 +13,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class ForeignCurrencyToEuroConversion {
+public class ForeignCurrencyToEuroRate {
 
     @ManyToOne
     private ForeignCurrency currency;
@@ -23,5 +23,5 @@ public class ForeignCurrencyToEuroConversion {
     private Date dateOfConversion;
 
     @NotNull
-    private double quotient;
+    private double conversionRate;
 }

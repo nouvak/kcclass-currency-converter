@@ -5,11 +5,11 @@ package si.kcclass.currencyconverter;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import si.kcclass.currencyconverter.ForeignCurrencyToEuroConversion;
+import si.kcclass.currencyconverter.ForeignCurrencyToEuroRate;
 
-privileged aspect ForeignCurrencyToEuroConversion_Roo_ToString {
+privileged aspect ForeignCurrencyToEuroRate_Roo_ToString {
     
-    public String ForeignCurrencyToEuroConversion.toString() {
+    public String ForeignCurrencyToEuroRate.toString() {
         return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
     

@@ -67,14 +67,12 @@
         <property name="persistenceUnitName" value="persistenceUnit"/>
         <property name="dataSource" ref="dataSource"/>
     </bean>
-<!-- 	<bean id="h2Server" class="org.h2.tools.Server" factory-method="createTcpServer" init-method="start" destroy-method="stop" depends-on="h2WebServer"> -->
-<!-- 		<constructor-arg value="-tcp,-tcpAllowOthers,true,-tcpPort,9092"/> -->
-<!-- 	</bean> -->
-<!-- 	<bean id="h2WebServer" class="org.h2.tools.Server" factory-method="createWebServer" init-method="start" destroy-method="stop"> -->
-<!-- 		<constructor-arg value="-web,-webAllowOthers,true,-webPort,8082"/> -->
-<!-- 	</bean> -->
 	<!-- provides a H2 console to look into the db if necessary -->
 	<bean id="h2WebServer" class="org.h2.tools.Server" factory-method="createWebServer" init-method="start" lazy-init="false">
 		<constructor-arg value="-web,-webPort,8082" />
 	</bean>
+	
+	<!-- Loads Spring Task Scheduler related configurations -->
+	<import resource="spring-scheduler.xml" />
+	
 </beans>

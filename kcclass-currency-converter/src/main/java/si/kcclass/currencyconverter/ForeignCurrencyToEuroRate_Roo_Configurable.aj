@@ -4,10 +4,10 @@
 package si.kcclass.currencyconverter;
 
 import org.springframework.beans.factory.annotation.Configurable;
-import si.kcclass.currencyconverter.ForeignCurrencyToEuroConversion;
+import si.kcclass.currencyconverter.ForeignCurrencyToEuroRate;
 
-privileged aspect ForeignCurrencyToEuroConversion_Roo_Configurable {
+privileged aspect ForeignCurrencyToEuroRate_Roo_Configurable {
     
-    declare @type: ForeignCurrencyToEuroConversion: @Configurable;
+    declare @type: ForeignCurrencyToEuroRate: @Configurable;
     
 }
