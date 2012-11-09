@@ -1,5 +1,7 @@
 package si.kcclass.currencyconverter;
 
+import java.util.Date;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,14 +31,15 @@ public class CurrencyConverterTest {
     @Test
     public void testConvert() throws Exception {
     	CurrencyConverter controller = new CurrencyConverter();
-    	ConvertedCurrencyValue value = controller.convert("USD", "EUR");
+    	Date dateCurrency = new Date();
+    	ConvertedCurrencyValue value = controller.convert("USD", "EUR", dateCurrency, 1.0);
     	Assert.assertNotNull(value);
     }
     
     @Test
     public void testConvertOnRequest() throws Exception {
         MockHttpServletRequest request = new MockHttpServletRequest(
-        		"GET", "/currencyconverter/convert/USD/EUR");
+        		"GET", "/currencyconverter/convert/USD/EUR/2012-11-01/1.0");
 
         MockHttpServletResponse response = new MockHttpServletResponse();
         Object handler = handlerMapping.getHandler(request).getHandler();

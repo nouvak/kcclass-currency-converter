@@ -2,6 +2,7 @@ package si.kcclass.currencyconverter;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,18 +18,12 @@ public class CurrencyConverter {
         return "currencyconverter/index";
     }*/
     
-//    @RequestMapping(value="convert/{fromCurrency}/{toCurrency}/{dateCurrency}/{value}", method = RequestMethod.GET)
-//    public @ResponseBody ConvertedCurrencyValue convert(
-//    		@PathVariable String fromCurrency, 
-//    		@PathVariable String toCurrency, 
-//    		@PathVariable Date dateCurrency, 
-//    		@PathVariable double value) {
-
-	@RequestMapping(value="convert/{fromCurrency}/{toCurrency}", method = RequestMethod.GET)
+    @RequestMapping(value="convert/{fromCurrency}/{toCurrency}/{dateCurrency}/{value}", method = RequestMethod.GET)
     public @ResponseBody ConvertedCurrencyValue convert(
     		@PathVariable String fromCurrency, 
-    		@PathVariable String toCurrency) {
-    	Date dateCurrency = new Date();
+    		@PathVariable String toCurrency, 
+    		@PathVariable @DateTimeFormat(pattern="yyyy-MM-dd") Date dateCurrency, 
+    		@PathVariable double value) {
     	double convertedValue = 1.0;
     	ConvertedCurrencyValue convertedCurrencyValue = new ConvertedCurrencyValue();
     	convertedCurrencyValue.setSymCurrencyFrom(fromCurrency);
