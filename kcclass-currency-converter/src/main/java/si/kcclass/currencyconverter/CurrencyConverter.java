@@ -2,10 +2,7 @@ package si.kcclass.currencyconverter;
 
 import java.util.Date;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,7 +23,8 @@ public class CurrencyConverter {
 //    		@PathVariable String toCurrency, 
 //    		@PathVariable Date dateCurrency, 
 //    		@PathVariable double value) {
-    @RequestMapping(value="convert/{fromCurrency}/{toCurrency}", method = RequestMethod.GET)
+
+	@RequestMapping(value="convert/{fromCurrency}/{toCurrency}", method = RequestMethod.GET)
     public @ResponseBody ConvertedCurrencyValue convert(
     		@PathVariable String fromCurrency, 
     		@PathVariable String toCurrency) {
