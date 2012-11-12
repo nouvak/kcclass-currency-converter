@@ -1,4 +1,4 @@
-package si.kcclass.currencyconverter;
+package si.kcclass.currencyconverter.domain;
 
 import java.util.Date;
 

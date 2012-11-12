@@ -1,4 +1,4 @@
-package si.kcclass.currencyconverter;
+package si.kcclass.currencyconverter.services;
 
 import java.io.IOException;
 import java.util.Date;
@@ -15,6 +15,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.log4j.Logger;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+
+import si.kcclass.currencyconverter.domain.ForeignCurrency;
+import si.kcclass.currencyconverter.domain.ForeignCurrencyToEuroRate;
 
 @Service
 public class CurrencyRatesUpdateService {

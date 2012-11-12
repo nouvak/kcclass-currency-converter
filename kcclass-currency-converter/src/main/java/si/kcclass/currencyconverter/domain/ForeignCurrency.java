@@ -1,4 +1,4 @@
-package si.kcclass.currencyconverter;
+package si.kcclass.currencyconverter.domain;
 
 import javax.persistence.Column;
 import javax.validation.constraints.NotNull;

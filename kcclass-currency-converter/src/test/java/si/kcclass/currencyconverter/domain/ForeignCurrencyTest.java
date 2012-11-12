@@ -1,6 +1,8 @@
-package si.kcclass.currencyconverter;
+package si.kcclass.currencyconverter.domain;
 
 import org.junit.Test;
+
+import si.kcclass.currencyconverter.domain.ForeignCurrency;
 
 public class ForeignCurrencyTest {
 
