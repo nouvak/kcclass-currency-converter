@@ -7,7 +7,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,9 +20,6 @@ import si.kcclass.currencyconverter.domain.ConvertedCurrencyValue;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:META-INF/spring/applicationContext.xml", "file:src/main/webapp/WEB-INF/spring/webmvc-config-test.xml"})
 public class CurrencyConverterTest {
-
-    @Autowired
-    private ApplicationContext applicationContext;
     
     @Autowired
     private RequestMappingHandlerAdapter handlerAdapter;

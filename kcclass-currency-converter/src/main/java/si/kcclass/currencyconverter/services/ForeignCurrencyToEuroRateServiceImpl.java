@@ -22,5 +22,10 @@ public class ForeignCurrencyToEuroRateServiceImpl implements ForeignCurrencyToEu
 			ForeignCurrency currency, Date dateOfConversion) {
 		return repository.findByCurrencyAndDateOfConversion(currency, dateOfConversion);
 	}
+
+	@Override
+	public ForeignCurrencyToEuroRate save(ForeignCurrencyToEuroRate currencyRate) {
+		return repository.save(currencyRate);
+	}
 	
 }

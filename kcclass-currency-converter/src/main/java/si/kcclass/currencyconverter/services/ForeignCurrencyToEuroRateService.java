@@ -10,4 +10,6 @@ public interface ForeignCurrencyToEuroRateService {
 	public ForeignCurrencyToEuroRate findByCurrencyAndDateOfConversion(
 			ForeignCurrency currency, Date dateOfConversion);
 	
+	public ForeignCurrencyToEuroRate save(ForeignCurrencyToEuroRate currencyRate);
+	
 }

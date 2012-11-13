@@ -1,6 +1,7 @@
 package si.kcclass.currencyconverter.repositories;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -11,5 +12,8 @@ public interface ForeignCurrencyToEuroRateRepository extends JpaRepository<Forei
 
 	public ForeignCurrencyToEuroRate findByCurrencyAndDateOfConversion(
 			ForeignCurrency currency, Date dateOfConversion);
+	
+	public List<ForeignCurrencyToEuroRate> findByCurrency(ForeignCurrency currency);
+
 	
 }
