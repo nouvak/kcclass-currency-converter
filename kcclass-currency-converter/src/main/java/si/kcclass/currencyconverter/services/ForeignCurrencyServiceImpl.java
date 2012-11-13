@@ -1,13 +1,13 @@
 package si.kcclass.currencyconverter.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import si.kcclass.currencyconverter.domain.ForeignCurrency;
 import si.kcclass.currencyconverter.repositories.ForeignCurrencyRepository;
 
-@Repository
+@Service
 @Transactional(readOnly=true)
 public class ForeignCurrencyServiceImpl implements ForeignCurrencyService {
 
