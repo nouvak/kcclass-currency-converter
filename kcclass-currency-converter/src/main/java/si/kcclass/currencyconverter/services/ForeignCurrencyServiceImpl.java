@@ -11,19 +11,11 @@ import si.kcclass.currencyconverter.repositories.ForeignCurrencyRepository;
 @Transactional(readOnly=true)
 public class ForeignCurrencyServiceImpl implements ForeignCurrencyService {
 
-	/*@PersistenceContext
-	private EntityManager em;*/
-	
 	@Autowired
 	private ForeignCurrencyRepository repository;
 
 	@Override
 	public ForeignCurrency findBySymbol(String currencySymbol) {
-	    /*TypedQuery<ForeignCurrency> query = 
-	    		em.createQuery("select c from ForeignCurrency c where r.symbol = ?1", 
-	    		ForeignCurrency.class);
-	    query.setParameter(1, currencySymbol);
-	    return query.getSingleResult();*/
 		return repository.findBySymbol(currencySymbol);
 	}
 

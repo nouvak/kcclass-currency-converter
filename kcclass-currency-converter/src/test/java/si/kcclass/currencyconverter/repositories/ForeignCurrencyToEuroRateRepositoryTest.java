@@ -30,6 +30,8 @@ public class ForeignCurrencyToEuroRateRepositoryTest extends AbstractTransaction
 	private ForeignCurrencyToEuroRateRepository foreignCurrencyToEuroRateRepository;
 
 	private ForeignCurrency currency;
+	private Date dateOfConversion;
+	private ForeignCurrencyToEuroRate currencyRate;
 	
 	@BeforeTransaction
 	public void setupData() throws Exception {
@@ -43,7 +45,15 @@ public class ForeignCurrencyToEuroRateRepositoryTest extends AbstractTransaction
 
 	@Before
 	public void setUp() throws Exception {
-		currency = foreignCurrencyRepository.findBySymbol("USD"); 
+		currency = foreignCurrencyRepository.findBySymbol("USD");
+		dateOfConversion = new Date();
+		
+		currencyRate = new ForeignCurrencyToEuroRate();
+		currencyRate.setCurrency(currency);
+		currencyRate.setDateOfConversion(dateOfConversion);
+		currencyRate.setConversionRate(1.0);
+		
+		foreignCurrencyToEuroRateRepository.save(currencyRate);
 	}
 
 	@After
@@ -52,10 +62,9 @@ public class ForeignCurrencyToEuroRateRepositoryTest extends AbstractTransaction
 
 	@Test
 	public void testFindByCurrencyAndDateOfConversion() {
-		Date date = new Date();
 		ForeignCurrencyToEuroRate currencyRate = 
 				foreignCurrencyToEuroRateRepository.findByCurrencyAndDateOfConversion(
-				currency, date);
+				currency, dateOfConversion);
 		assertNotNull(currencyRate);
 	}
 

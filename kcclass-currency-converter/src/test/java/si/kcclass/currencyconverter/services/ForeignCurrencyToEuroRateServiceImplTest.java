@@ -50,11 +50,13 @@ public class ForeignCurrencyToEuroRateServiceImplTest extends AbstractTransactio
 
 	@Test
 	public void testFindBySymbolAndDate() {
-		//Date dateOfConversion = new Date();
+		Date testDate = new Date();
 		ForeignCurrencyToEuroRate currencyRate =
 				foreignCurrencyToEuroRateService.findByCurrencyAndDateOfConversion(
-				currency, dateOfConversion);
+				currency, testDate);
 		assertNotNull(currencyRate);
+		assertEquals(currency, currencyRate.getCurrency());
+		assertEquals(dateOfConversion, currencyRate.getDateOfConversion());
 	}
 	
 	public void testFindBySymbolAndDateNearest() {

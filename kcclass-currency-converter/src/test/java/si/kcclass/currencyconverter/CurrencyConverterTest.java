@@ -1,9 +1,13 @@
 
 package si.kcclass.currencyconverter;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +20,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 import si.kcclass.currencyconverter.domain.ConvertedCurrencyValue;
+import si.kcclass.currencyconverter.services.CurrencyRatesUpdateService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:META-INF/spring/applicationContext.xml", "file:src/main/webapp/WEB-INF/spring/webmvc-config-test.xml"})
@@ -27,18 +32,31 @@ public class CurrencyConverterTest {
     @Autowired
     private RequestMappingHandlerMapping handlerMapping;
     
+    Date dateCurrency;
+    
+	@Before
+	public void setUp() throws Exception {
+		dateCurrency = new Date();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+    
     @Test
     public void testConvert() throws Exception {
     	CurrencyConverter controller = new CurrencyConverter();
-    	Date dateCurrency = new Date();
     	ConvertedCurrencyValue value = controller.convert("USD", "EUR", dateCurrency, 1.0);
     	Assert.assertNotNull(value);
     }
     
     @Test
     public void testConvertOnRequest() throws Exception {
+    	DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+    	dateCurrency.toString();
         MockHttpServletRequest request = new MockHttpServletRequest(
-        		"GET", "/currencyconverter/convert/USD/EUR/2012-11-01/1.0");
+        		"GET", "/currencyconverter/convert/USD/EUR/" + 
+        		df.format(dateCurrency) + "/1.0");
 
         MockHttpServletResponse response = new MockHttpServletResponse();
         Object handler = handlerMapping.getHandler(request).getHandler();

@@ -19,7 +19,7 @@ public class ForeignCurrencyToEuroRate {
     @ManyToOne
     private ForeignCurrency currency;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     @DateTimeFormat(style = "M-")
     private Date dateOfConversion;
 
