@@ -22,7 +22,7 @@ import si.kcclass.currencyconverter.domain.ForeignCurrencyToEuroRate;
 @Service
 public class CurrencyRatesUpdateService {
 
-	protected static Logger logger = Logger.getLogger("service");
+	protected static Logger logger = Logger.getLogger(CurrencyRatesUpdateService.class);
 
 	private Set<String> getSupportedCurrencies() throws IOException {
 		HttpClient httpclient = new DefaultHttpClient();
