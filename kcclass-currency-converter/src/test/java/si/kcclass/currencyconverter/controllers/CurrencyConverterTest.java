@@ -1,5 +1,5 @@
 
-package si.kcclass.currencyconverter;
+package si.kcclass.currencyconverter.controllers;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -19,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
+import si.kcclass.currencyconverter.controllers.CurrencyConverter;
 import si.kcclass.currencyconverter.domain.ConvertedCurrencyValue;
 import si.kcclass.currencyconverter.services.CurrencyRatesUpdateService;
 
