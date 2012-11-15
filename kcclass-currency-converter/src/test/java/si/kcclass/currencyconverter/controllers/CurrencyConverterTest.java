@@ -21,7 +21,6 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 
 import si.kcclass.currencyconverter.controllers.CurrencyConverter;
 import si.kcclass.currencyconverter.domain.ConvertedCurrencyValue;
-import si.kcclass.currencyconverter.services.CurrencyRatesUpdateService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:META-INF/spring/applicationContext.xml", "file:src/main/webapp/WEB-INF/spring/webmvc-config-test.xml"})
